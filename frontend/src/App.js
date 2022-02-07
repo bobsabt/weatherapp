@@ -1,13 +1,15 @@
 import React from 'react';
 import Navbar from './Components/Navbar';
 import Card from './Components/Card';
+import CreateCard from './Components/CreateCard';
 import { getDayName, } from './Components/utils';
 import './index.css';
 
 function App() {
   // The display of the cities
   const [cards, setCards] = React.useState([]);
-  
+  // The state of adding a new card/city is active or not
+  const [isAddCardActive, setIsAddCardActive] = React.useState(true);
   // Get the api key
   const API_KEY = process.env.REACT_APP_API_KEY;
   
@@ -30,6 +32,11 @@ function App() {
     }),
     []
   );
+  // Add card/city 
+  const addCard = () => {
+    setIsAddCardActive(false);
+    setCards([...cards, {id: Math.floor(Math.random()*10000)+1, location:"", icon:"", temp:"", text:"", feels:"", nextdays:"", isSearchShown:true}]);
+  };
 
   return (
     <div className="App">
@@ -48,6 +55,7 @@ function App() {
               />
           </div>
           )}
+          <CreateCard addCard={addCard}/>
       </div>
     </div>
   );

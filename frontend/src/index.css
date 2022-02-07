@@ -196,3 +196,21 @@ body {
   width: 230px;
 }
 
+.add-card-container{
+  border: 2px solid white;
+  color: black;
+  background-image: url("./Pictures/createcardbackground.jpg");
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.plus{
+  cursor: pointer;
+  font-size: 70px;
+  border-radius: 50%;
+}
+
+.plus:hover{
+ background-color:rgb(141, 138, 138);
+}
+
