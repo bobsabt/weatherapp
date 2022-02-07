@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import { getDayName } from './utils';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const SearchContent = ({apikey, cardId, cards, setCards, setIsAddCardActive}) => {
     const [error, setError] = React.useState("");
@@ -52,7 +54,7 @@ const SearchContent = ({apikey, cardId, cards, setCards, setIsAddCardActive}) =>
                     onChange={(e)=>{setCity(e.target.value); setError("")}} 
                     onKeyUp={handlePressEnter}                  
                 />
-                <button className="search-btn" onClick={()=>{getWeatherData()}}><i className="fas fa-search"></i> </button> 
+                <button className="search-btn" onClick={()=>{getWeatherData()}}><FontAwesomeIcon  icon={faSearch}/> </button> 
             </div> 
             <div className='error-container'>
                 {isShowError && error}               
