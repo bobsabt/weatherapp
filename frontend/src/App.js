@@ -16,7 +16,7 @@ function App() {
 
   // By default it starts with Budapest weather 
   React.useEffect(() =>
-    fetch(`http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=Budapest&days=3`)
+    fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=Budapest&days=3`)
     .then((response) => response.json())
     .then((d) => {
       // Add name of the next days with using getDayName()

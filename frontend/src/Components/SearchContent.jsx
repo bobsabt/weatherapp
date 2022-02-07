@@ -16,7 +16,7 @@ const SearchContent = ({apikey, cardId, cards, setCards, setIsAddCardActive}) =>
             setError("Missing city name");
         }else{
             try{
-                const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${city}&days=3`);
+                const response = await axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${city}&days=3`);
                 const parsedData = response.data;
 
                 let myNextArr = [];
