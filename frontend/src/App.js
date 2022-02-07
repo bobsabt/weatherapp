@@ -32,11 +32,17 @@ function App() {
     }),
     []
   );
+
   // Add card/city 
   const addCard = () => {
     setIsAddCardActive(false);
     setCards([...cards, {id: Math.floor(Math.random()*10000)+1, location:"", icon:"", temp:"", text:"", feels:"", nextdays:"", isSearchShown:true}]);
   };
+
+  // Delete card
+  const deleteCard = (id) => {
+    setCards(cards.filter((card) => id !== card.id))
+  }; 
 
   return (
     <div className="App">
@@ -45,6 +51,7 @@ function App() {
           {cards.map( (card, index) => 
           <div className="card-container" key={index}>
               <Card 
+                cardId={card.id}
                 location={card.location.name} 
                 country={card.location.country} 
                 icon={card.current.condition.icon} 
@@ -52,6 +59,7 @@ function App() {
                 text={card.current.condition.text} 
                 feels={card.current.feelslike_c}
                 nextdays={card.myNextArr} 
+                handleDelete={deleteCard}
               />
           </div>
           )}

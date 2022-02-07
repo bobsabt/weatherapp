@@ -2,8 +2,10 @@ import React from 'react';
 import ReactCardFlip from 'react-card-flip';
 import FrontCard from './FrontCard';
 import BackCard from './BackCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
-const Card = ({location, country, icon, temp, text, feels, nextdays}) => {
+const Card = ({location, country, icon, temp, text, feels, nextdays, handleDelete, cardId}) => {
     const [isFlipped, setIsFlipped] = React.useState(false);
 
     const handleClick = (e)=> {
@@ -12,6 +14,7 @@ const Card = ({location, country, icon, temp, text, feels, nextdays}) => {
     };
     return (
         <>
+        <FontAwesomeIcon className="delete" icon={faTimesCircle} onClick={()=>handleDelete(cardId)}/>
             <p className='city'>{location}</p>
             <p className='country'>{country}</p>
             <ReactCardFlip isFlipped ={isFlipped} flipDirection="vertical">
