@@ -1,0 +1,73 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.App {
+  text-align: center;
+  height: 100vh;
+}
+.title-container{
+  height: 100px;
+  color: white;
+}
+
+.title-container h2{
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.title-container h2 span{
+  font-weight: normal;
+  font-size: 18px;
+}
+@media (max-width: 760px){
+  .title-container{
+    display: block;
+  }
+  .title-container h2{
+    position: static;
+  }
+}
+.main-title {
+  font-size: 30px;
+  background-image: url(./pictures/sky.jpg);
+  color: transparent;
+  -webkit-background-clip: text;
+  animation: animate 10s infinite linear;
+  max-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+}
+@keyframes animate{
+  from{
+    background-position: 0 0;
+  }
+  to{
+    background-position: 100% 100%;
+  }
+}
+
+.sub-title{
+  text-align: right;
+  max-width: 250px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 0 auto;
+  margin-top: -20px;
+}
