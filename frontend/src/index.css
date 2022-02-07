@@ -16,18 +16,27 @@ body {
   text-align: center;
   height: 100vh;
 }
+.cards-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 40px;
+
+  margin: 100px  50px 100px 50px;
+}
 .title-container{
   height: 100px;
   color: white;
 }
 
 .title-container h2{
+  font-size: 25px;
+  font-weight: bold;
+
   position: absolute;
   top: 20px;
   right: 30px;
-
-  font-size: 25px;
-  font-weight: bold;
 }
 
 .title-container h2 span{
@@ -72,27 +81,19 @@ body {
   margin-top: -20px;
 }
 
-.cards-container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  gap: 40px;
 
-  margin: 100px;
-}
 
 .card-container{
-  position: relative;
-
   text-align:center;
   height: 320px;
   width: 250px;
   color: white;
-  border: 2px solid rgb(36, 36, 36);
-  border-radius: 20px;
-  padding: 10px;
   background-image: linear-gradient(black, rgb(71, 71, 71));
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid rgb(36, 36, 36);
+
+  position: relative;
 } 
 .city{
   font-size: 17px;
@@ -148,11 +149,11 @@ body {
 }
 
 .btn-toggle{
+  width: 100px;
+  font-weight: bold;
   padding: 5px;
   border-radius: 20px;
   border: none;
-  font-weight: bold;
-  width: 100px;
 }
 
 .backcard-container{
@@ -191,17 +192,17 @@ body {
 }
 
 .addcity{
+  width: 230px;
   margin-top: 10px;
   margin-bottom: 25px;
-  width: 230px;
 }
 
 .add-card-container{
-  border: 2px solid white;
   color: black;
   background-image: url("./Pictures/createcardbackground.jpg");
   background-size: cover;
   margin-bottom: 50px;
+  border: 2px solid white;
 }
 
 .plus{
@@ -224,20 +225,21 @@ body {
   top:-10px;
   right: -15px;
 }
+
 .search-container{
-  margin-top: 35px;
   width: 230px;
+  margin-top: 35px;
 }
 
 .search-box {
   display: flex;
   align-items: center;
   width: 90%;
+  margin-left: 5%;
 
   position: relative;
-
-  margin-left: 5%;
 }
+
 .search-input {
   width: 100%;
   height: 30px;
@@ -250,9 +252,9 @@ body {
 }
 
 .search-btn {
-  font-size: 18px;
   width: 40px;
   height: 30px;
+  font-size: 18px;
   color: #fff;
   text-align: center;
   background: black;
@@ -262,7 +264,7 @@ body {
   cursor: pointer;
 }
 .error-container{
-  margin-top: 5px;
   font-weight: bold;
+  margin-top: 5px;
 }
 
