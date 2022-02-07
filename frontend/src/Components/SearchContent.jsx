@@ -13,7 +13,7 @@ const SearchContent = ({apikey, cardId, cards, setCards, setIsAddCardActive}) =>
         
         if(city.length === 0) {
             setIsShowError(true);
-            setError("Missing cityName");
+            setError("Missing city name");
         }else{
             try{
                 const response = await axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apikey}&q=${city}&days=3`);

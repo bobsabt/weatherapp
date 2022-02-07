@@ -44,6 +44,12 @@ function App() {
     setCards(cards.filter((card) => id !== card.id))
   }; 
 
+  // Delete new card and set add card is true 
+  const deleteNewCard = (id) => {
+    setCards(cards.filter((card) => id !== card.id))
+    setIsAddCardActive(true)
+  }; 
+
   return (
     <div className="App">       
     <Navbar />
@@ -71,6 +77,7 @@ function App() {
             cards={cards} 
             setCards={setCards} 
             setIsAddCardActive={setIsAddCardActive}
+            handleDelete={deleteNewCard} 
           />
         }
       </div>
