@@ -45,27 +45,39 @@ function App() {
   }; 
 
   return (
-    <div className="App">
-      <Navbar />
-      <div className='cards-container'>      
-          {cards.map( (card, index) => 
-          <div className="card-container" key={index}>
-              <Card 
-                cardId={card.id}
-                location={card.location.name} 
-                country={card.location.country} 
-                icon={card.current.condition.icon} 
-                temp={card.current.temp_c} 
-                text={card.current.condition.text} 
-                feels={card.current.feelslike_c}
-                nextdays={card.myNextArr} 
-                handleDelete={deleteCard}
-              />
-          </div>
-          )}
-          <CreateCard addCard={addCard}/>
+    <div className="App">       
+    <Navbar />
+    <div className='cards-container'>      
+      {cards.map( (card, index) => 
+      <div className={!card.isSearchShown? "card-container": "card-container add-card-container"}  key={index}>
+        {!card.isSearchShown ?
+          <Card 
+            cardId={card.id} 
+            location={card.location.name} 
+            country={card.location.country} 
+            icon={card.current.condition.icon} 
+            temp={card.current.temp_c} 
+            text={card.current.condition.text} 
+            feels={card.current.feelslike_c} 
+            nextdays={card.myNextArr} 
+            isSearchShown={card.isSearchShown} 
+            handleDelete={deleteCard}
+          />
+        :
+          <Card
+            apikey={API_KEY}
+            cardId={card.id} 
+            isSearchShown={card.isSearchShown} 
+            cards={cards} 
+            setCards={setCards} 
+            setIsAddCardActive={setIsAddCardActive}
+          />
+        }
       </div>
+      )}
+      {isAddCardActive && <CreateCard addCard={addCard} />}
     </div>
+  </div>
   );
 }
 
