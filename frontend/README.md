@@ -25,7 +25,7 @@ Get vector icons and social logos on your website with Font Awesome, the web's m
 It can display the weather data of the selected city if it exist in the API's store. 
 By default it shows Budapest's weather but you can add/delete differrent card/cities.
 You can switch between today and next two days' weather forecast.
-Aim: use fetch and axio, switch the display between today and forecast views, add and delete cards
+Aim: use fetch and axios, switch the display between today and forecast views, add and delete cards
 
 ######  About the API and how it works
 
