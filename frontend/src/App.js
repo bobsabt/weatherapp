@@ -44,6 +44,7 @@ function App() {
                 temp={card.current.temp_c} 
                 text={card.current.condition.text} 
                 feels={card.current.feelslike_c}
+                nextdays={card.myNextArr} 
               />
           </div>
           )}
