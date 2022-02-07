@@ -18,13 +18,16 @@ You may also see any lint errors in the console.
 
 React Card Flip is allows you to use the card flipping animation. 
 
-#### This is my weather forcast project
+#### npm @fortawesome/react-fontawesome and @fortawesome/free-solid-svg-icons
+Get vector icons and social logos on your website with Font Awesome, the web's most popular icon set and toolkit.
+
+##### This is my weather forcast project
 It can display the weather data of the selected city if it exist in the API's store. 
 By default it shows Budapest's weather but you can add/delete differrent card/cities.
 You can switch between today and next two days' weather forecast.
 Aim: use fetch and axio, switch the display between today and forecast views, add and delete cards
 
-##### About the API and how it works
+######  About the API and how it works
 
 WeatherAPI.com provides access to weather and geo data via a JSON/XML restful API. It allows developers to create desktop, web and mobile applications using this data very easily.
 
