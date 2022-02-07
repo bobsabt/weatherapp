@@ -44,7 +44,7 @@ body {
 }
 .main-title {
   font-size: 30px;
-  background-image: url(./pictures/sky.jpg);
+  background-image: url(./Pictures/sky.jpg);
   color: transparent;
   -webkit-background-clip: text;
   animation: animate 10s infinite linear;
